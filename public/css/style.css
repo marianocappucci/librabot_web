@@ -77,7 +77,8 @@ img { max-width: 100%; }
 /* ── Hero ──────────────────────────────────────────────────── */
 .hero {
   background:
-    linear-gradient(135deg, #1a0710 0%, #3b0a1c 55%, #1a0710 100%),
+    linear-gradient(to bottom, rgba(26,7,16,.86) 0%, rgba(40,10,24,.70) 55%, rgba(26,7,16,.92) 100%),
+    url('/img/burbujas-hero.svg') 70% center / cover no-repeat,
     #1a0710;
   color: white;
   padding: 6rem 2rem 5rem;
@@ -105,6 +106,9 @@ img { max-width: 100%; }
 .hero h1 span { color: #fb7185; }
 .hero p { font-size: 1.15rem; color: #e4d8dc; margin: 0 auto 2.5rem;
           max-width: 580px; }
+@media (max-width: 640px) {
+  .hero { background-position: 0 0, 30% center, 0 0; }
+}
 :root {
   --p-hero-accent: #fda4af;
   --p-on-dark-accent: #fb7185;

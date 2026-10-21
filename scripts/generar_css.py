@@ -36,9 +36,16 @@ TOKENS = {
   --border:      #e2e8f0;
   --bg:          #f8fafc;
 """,
-    # Sin foto: un degradé oscuro del color de la marca.
-    "hero_bg": """    linear-gradient(135deg, #1a0710 0%, #3b0a1c 55%, #1a0710 100%),
+    # Como el resto de la suite: la imagen de fondo bajo un degradé oscuro, para que quede
+    # sutil y el texto se lea igual. Las burbujas son un dibujo propio (img/burbujas-hero.svg).
+    "hero_bg": """    linear-gradient(to bottom, rgba(26,7,16,.86) 0%, rgba(40,10,24,.70) 55%, rgba(26,7,16,.92) 100%),
+    url('/img/burbujas-hero.svg') 70% center / cover no-repeat,
     #1a0710;
+""",
+    # En pantallas angostas la pareja de burbujas caía detrás del párrafo: se corre al borde.
+    "hero_extra": """@media (max-width: 640px) {
+  .hero { background-position: 0 0, 30% center, 0 0; }
+}
 """,
     "hero_before": """.hero::before {
   content: '';
