@@ -5,7 +5,7 @@ servido por nginx en Docker, como `librasuite_web` (sin `/docs/` ni login).
 
 - **El propio LibraBot atiende la landing**: el widget de `chat.librabot.com.ar` (bandeja
   «Web librabot.com.ar») y el bot responde leyendo esta página.
-- **Marca**: `public/img/marca.svg` y `favicon.svg`, copiados del tag `v0.174.0` de libra-ui
+- **Marca**: `public/img/marca.svg` y `favicon.svg`, copiados del tag `v0.175.0` de libra-ui
   (ADR-088). No se redibujan acá.
 - **CSS**: `public/css/style.css` sale del generador de libra-web-kit con los tokens de LibraBot
   (`scripts/generar_css.py`, con el kit clonado al lado). No se edita a mano.
