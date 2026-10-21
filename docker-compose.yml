@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    image: librabot-web:latest
+    container_name: librabot-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8105:80"
+    networks:
+      - stack-net
+
+networks:
+  stack-net:
+    external: true
+    name: stack_stack-net

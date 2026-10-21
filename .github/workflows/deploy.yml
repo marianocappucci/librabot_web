@@ -1,0 +1,21 @@
+name: Deploy a VPS
+
+# El workflow reusable de las landings (libra-web-kit): rsync al VPS, rebuild y
+# verificación de que el contenedor sirve lo que se sincronizó.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Un deploy por vez; los que llegan esperan (cortar uno a la mitad es peor).
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    uses: marianocappucci/libra-web-kit/.github/workflows/deploy-vps.yml@main
+    with:
+      remote_path: /root/librabot_web/
+    secrets: inherit
