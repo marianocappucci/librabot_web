@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio web — Guía de LibraBot</title>
+  <meta name="description" content="Cómo cargar la dirección de tu sitio en LibraBot, volver a leerlo y avisarle cada cambio desde WordPress.">
+  <link rel="canonical" href="https://librabot.com.ar/docs/sitio-web.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sitio web — Guía de LibraBot">
+  <meta property="og:description" content="Cómo cargar la dirección de tu sitio en LibraBot, volver a leerlo y avisarle cada cambio desde WordPress.">
+  <meta property="og:url" content="https://librabot.com.ar/docs/sitio-web.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="navbar-brand" style="text-decoration:none"><img src="/img/marca.svg" alt="" class="logo-icon" width="32" height="32">LibraBot</a>
+  <div class="navbar-links">
+    <a href="/#funciones">Qué hace</a>
+    <a href="/#planes">Planes</a>
+    <a href="/docs/" class="active" style="color:var(--brand)">Guía</a>
+    <a href="https://panel.librabot.com.ar" target="_blank" rel="noopener" class="btn-nav">Entrar al panel</a>
+  </div>
+</nav>
+
+<div class="docs-wrapper">
+  <nav class="docs-sidebar" aria-label="Guía">
+    <div class="docs-sidebar-section">Inicio</div>
+    <a href="/docs/">Introducción</a>
+    <a href="/docs/primeros-pasos.html">Primeros pasos</a>
+    <div class="docs-sidebar-section">Configurar tu bot</div>
+    <a href="/docs/sitio-web.html" class="active">Sitio web</a>
+    <a href="/docs/instalar.html">Instalarlo en tu sitio</a>
+    <a href="/docs/aspecto.html">Aspecto del chat</a>
+    <a href="/docs/mensajes.html">Bienvenida y botones de inicio</a>
+    <a href="/docs/preguntas-fijas.html">Preguntas fijas</a>
+    <a href="/docs/informacion.html">Información extra</a>
+    <a href="/docs/sin-respuesta.html">Sin respuesta</a>
+    <div class="docs-sidebar-section">Atención</div>
+    <a href="/docs/atencion.html">Hablar con una persona</a>
+    <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>
+    <div class="docs-sidebar-section">Tu cuenta</div>
+    <a href="/docs/plan.html">Tu plan</a>
+    <a href="/docs/problemas.html">Problemas frecuentes</a>
+  </nav>
+
+  <main class="docs-content">
+    <h1>Sitio web</h1>
+<p class="docs-lead">De dónde aprende el bot, cada cuánto se actualiza y cómo avisarle al instante cuando cambiás algo.</p>
+<h2>La dirección de tu sitio</h2>
+<p>En «Mi bot», sección <strong>Sitio web</strong>, escribí la dirección completa (por ejemplo <code>https://www.tuempresa.com</code>) y tocá <strong>Guardar</strong>. El bot contesta con lo que lee de ese sitio.</p>
+<h2>Cuándo se actualiza</h2>
+<ul>
+<li><strong>Solo, todas las noches.</strong> LibraBot vuelve a leer tu sitio cada noche.</li>
+<li><strong>A pedido.</strong> Si cambiaste algo y no querés esperar, tocá <strong>Volver a leer el sitio</strong>. Si cambiaste la dirección, guardala primero: el botón se habilita después.</li>
+</ul>
+<p>Mientras lee, el panel lo indica y se actualiza solo. Si tu sitio tiene muchas páginas puede tardar varios minutos, y podés seguir usando el panel. Cuando termina, ves la fecha y el resumen de la última lectura; si falló, el panel te dice el motivo.</p>
+<h2>Aviso desde WordPress</h2>
+<p>Si tu sitio es WordPress, podés instalar un plugin y cada publicación nueva, cambiada o retirada le llega al bot en el momento, sin esperar a la noche. En «Mi bot», sección <strong>Aviso desde WordPress</strong>:</p>
+<ol class="step-list">
+<li><strong>Descargá el plugin.</strong> Ya viene configurado para tu bot.</li>
+<li><strong>Subilo a WordPress:</strong> entrá a <em>Plugins → Añadir nuevo → Subir plugin</em>, elegí el archivo y activalo.</li>
+</ol>
+<p>Si preferís configurarlo a mano, tocá «Configurarlo a mano»: el panel te muestra la dirección del aviso y la clave, para cargarlas en WordPress, en <em>Ajustes → LibraBot</em>.</p>
+<div class="callout warn">
+<p><strong>No compartas la clave del aviso.</strong> Con ella se le puede pedir al bot que lea páginas de tu sitio. Si sospechás que se filtró, tocá «Cambiar la clave» y cargá la nueva en WordPress.</p>
+</div>
+<div class="callout">
+<p>Esta sección aparece completa cuando ya cargaste la dirección de tu sitio.</p>
+</div>
+<div class="docs-nav-footer">
+<a href="/docs/primeros-pasos.html">← Primeros pasos</a>
+<a href="/docs/instalar.html">Instalarlo en tu sitio →</a>
+</div>
+  </main>
+</div>
+
+<footer style="background:var(--dark);color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem;">
+  © 2026 LibraBot · parte de <a href="https://librasuite.com.ar" style="color:#94a3b8">LibraSuite</a> · <a href="/" style="color:#94a3b8">Inicio</a> · <a href="/legal/terminos.html" style="color:#94a3b8">Términos y condiciones</a>
+</footer>
+</body>
+</html>
