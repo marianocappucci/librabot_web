@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instalarlo en tu sitio — Guía de LibraBot</title>
+  <meta name="description" content="Cómo pegar el código de LibraBot en tu sitio web para que aparezca el chat, con o sin WordPress.">
+  <link rel="canonical" href="https://librabot.com.ar/docs/instalar.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Instalarlo en tu sitio — Guía de LibraBot">
+  <meta property="og:description" content="Cómo pegar el código de LibraBot en tu sitio web para que aparezca el chat, con o sin WordPress.">
+  <meta property="og:url" content="https://librabot.com.ar/docs/instalar.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="navbar-brand" style="text-decoration:none"><img src="/img/marca.svg" alt="" class="logo-icon" width="32" height="32">LibraBot</a>
+  <div class="navbar-links">
+    <a href="/#funciones">Qué hace</a>
+    <a href="/#planes">Planes</a>
+    <a href="/docs/" class="active" style="color:var(--brand)">Guía</a>
+    <a href="https://panel.librabot.com.ar" target="_blank" rel="noopener" class="btn-nav">Entrar al panel</a>
+  </div>
+</nav>
+
+<div class="docs-wrapper">
+  <nav class="docs-sidebar" aria-label="Guía">
+    <div class="docs-sidebar-section">Inicio</div>
+    <a href="/docs/">Introducción</a>
+    <a href="/docs/primeros-pasos.html">Primeros pasos</a>
+    <div class="docs-sidebar-section">Configurar tu bot</div>
+    <a href="/docs/sitio-web.html">Sitio web</a>
+    <a href="/docs/instalar.html" class="active">Instalarlo en tu sitio</a>
+    <a href="/docs/aspecto.html">Aspecto del chat</a>
+    <a href="/docs/mensajes.html">Bienvenida y botones de inicio</a>
+    <a href="/docs/preguntas-fijas.html">Preguntas fijas</a>
+    <a href="/docs/informacion.html">Información extra</a>
+    <a href="/docs/sin-respuesta.html">Sin respuesta</a>
+    <div class="docs-sidebar-section">Atención</div>
+    <a href="/docs/atencion.html">Hablar con una persona</a>
+    <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>
+    <div class="docs-sidebar-section">Tu cuenta</div>
+    <a href="/docs/plan.html">Tu plan</a>
+    <a href="/docs/problemas.html">Problemas frecuentes</a>
+  </nav>
+
+  <main class="docs-content">
+    <h1>Instalarlo en tu sitio</h1>
+<p class="docs-lead">Cómo hacer que el chat aparezca en tu sitio web.</p>
+<h2>Copiá el código</h2>
+<p>En «Mi bot», sección <strong>Código para tu sitio</strong>, tocá el botón de copiar. Es un bloque corto de código propio de tu bot.</p>
+<h2>Pegalo en tu sitio</h2>
+<p>Pegalo justo antes de la etiqueta <code>&lt;/body&gt;</code>, en todas las páginas donde quieras que aparezca el bot. Si tu sitio tiene una plantilla común (un pie o un <em>footer</em> que se repite en todas las páginas), alcanza con ponerlo ahí una sola vez.</p>
+<h3>En WordPress</h3>
+<p>Lo más simple es un plugin para insertar código en el pie del sitio (de los que se llaman «Insert Headers and Footers» o similares): pegás el código en el campo del pie y guardás. También se puede agregar en el archivo <code>footer.php</code> de tu tema, antes de <code>&lt;/body&gt;</code>.</p>
+<h3>En otros sitios</h3>
+<p>Si tu sitio lo mantiene otra persona o una agencia, pasale el código con esta indicación: «pegarlo antes del cierre de body en todas las páginas».</p>
+<h2>Verificá que anda</h2>
+<p>Abrí tu sitio en una ventana nueva. Tiene que aparecer el botón del chat abajo a la derecha. Si lo tocás, se abre el chat con tu saludo y tus botones de inicio.</p>
+<div class="callout">
+<p><strong>Si no ves el chat</strong>, revisá <a href="/docs/problemas.html">Problemas frecuentes</a>. Las causas más comunes son que el código quedó en una página que no es la que mirás, o que el sitio guarda una copia vieja de la página (caché).</p>
+</div>
+<div class="callout warn">
+<p>Si el panel dice «Este bot todavía no tiene un código para pegar», escribinos: falta terminar de preparar tu cuenta de atención.</p>
+</div>
+<div class="docs-nav-footer">
+<a href="/docs/sitio-web.html">← Sitio web</a>
+<a href="/docs/aspecto.html">Aspecto del chat →</a>
+</div>
+  </main>
+</div>
+
+<footer style="background:var(--dark);color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem;">
+  © 2026 LibraBot · parte de <a href="https://librasuite.com.ar" style="color:#94a3b8">LibraSuite</a> · <a href="/" style="color:#94a3b8">Inicio</a> · <a href="/legal/terminos.html" style="color:#94a3b8">Términos y condiciones</a>
+</footer>
+</body>
+</html>
