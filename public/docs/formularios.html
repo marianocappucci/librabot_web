@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios y pedidos — Guía de LibraBot</title>
+  <meta name="description" content="Cómo armar formularios para que LibraBot pida turnos, presupuestos o reclamos de a un dato por vez, y cómo recibir los pedidos.">
+  <link rel="canonical" href="https://librabot.com.ar/docs/formularios.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Formularios y pedidos — Guía de LibraBot">
+  <meta property="og:description" content="Cómo armar formularios para que LibraBot pida turnos, presupuestos o reclamos de a un dato por vez, y cómo recibir los pedidos.">
+  <meta property="og:url" content="https://librabot.com.ar/docs/formularios.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="navbar-brand" style="text-decoration:none"><img src="/img/marca.svg" alt="" class="logo-icon" width="32" height="32">LibraBot</a>
+  <div class="navbar-links">
+    <a href="/#funciones">Qué hace</a>
+    <a href="/#planes">Planes</a>
+    <a href="/docs/" class="active" style="color:var(--brand)">Guía</a>
+    <a href="https://panel.librabot.com.ar" target="_blank" rel="noopener" class="btn-nav">Entrar al panel</a>
+  </div>
+</nav>
+
+<div class="docs-wrapper">
+  <nav class="docs-sidebar" aria-label="Guía">
+    <div class="docs-sidebar-section">Inicio</div>
+    <a href="/docs/">Introducción</a>
+    <a href="/docs/primeros-pasos.html">Primeros pasos</a>
+    <div class="docs-sidebar-section">Configurar tu bot</div>
+    <a href="/docs/sitio-web.html">Sitio web</a>
+    <a href="/docs/instalar.html">Instalarlo en tu sitio</a>
+    <a href="/docs/aspecto.html">Aspecto del chat</a>
+    <a href="/docs/mensajes.html">Bienvenida y botones de inicio</a>
+    <a href="/docs/preguntas-fijas.html">Preguntas fijas</a>
+    <a href="/docs/informacion.html">Información extra</a>
+    <a href="/docs/avisos.html">Avisos por palabra clave</a>
+    <a href="/docs/formularios.html" class="active">Formularios y pedidos</a>
+    <a href="/docs/sin-respuesta.html">Sin respuesta</a>
+    <div class="docs-sidebar-section">Atención</div>
+    <a href="/docs/atencion.html">Hablar con una persona</a>
+    <a href="/docs/whatsapp.html">El bot en tu WhatsApp</a>
+    <a href="/docs/cartel-qr.html">Cartel con el QR de WhatsApp</a>
+    <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>
+    <div class="docs-sidebar-section">Seguimiento</div>
+    <a href="/docs/actividad.html">Actividad</a>
+    <a href="/docs/historial.html">Historial de cambios</a>
+    <div class="docs-sidebar-section">Tu cuenta</div>
+    <a href="/docs/plan.html">Tu plan</a>
+    <a href="/docs/usuarios.html">Usuarios y solo lectura</a>
+    <a href="/docs/problemas.html">Problemas frecuentes</a>
+  </nav>
+
+  <main class="docs-content">
+    <h1>Formularios y pedidos</h1>
+<p class="docs-lead">Que el bot pida los datos de a uno (nombre, teléfono, qué necesita) y te deje un pedido listo para atender.</p>
+<h2>Para qué sirven</h2>
+<p>Para tomar un turno, un presupuesto, un reclamo o una consulta sin que el visitante tenga que escribir todo de una vez. Cada formulario aparece como un <strong>botón del menú del chat</strong>: al tocarlo, el bot hace las preguntas una por una y al final te deja un pedido.</p>
+<h2>Armar un formulario</h2>
+<p>En la pantalla <strong>Formularios</strong>, tocá <strong>Nuevo formulario</strong>:</p>
+<table class="docs-table">
+<thead><tr><th>Campo</th><th>Qué poner</th></tr></thead>
+<tbody>
+<tr><td><strong>Nombre</strong></td><td>Es el texto del botón del chat. Ejemplo: «Pedir presupuesto». No puede repetirse entre tus formularios.</td></tr>
+<tr><td><strong>Qué dice antes de la primera pregunta</strong></td><td>Opcional. Ejemplo: «Armamos tu presupuesto en un minuto.»</td></tr>
+<tr><td><strong>Datos que pide</strong></td><td>De 1 a 12. Cada uno tiene su pregunta, su tipo y si es obligatorio. El orden se cambia con las flechas.</td></tr>
+<tr><td><strong>Qué dice al terminar</strong></td><td>Opcional. Si lo dejás vacío, el bot dice que recibió los datos y que le van a responder.</td></tr>
+<tr><td><strong>Mostrar un botón en el menú</strong></td><td>Si lo destildás, el formulario no aparece en el menú, pero se puede empezar escribiendo su nombre.</td></tr>
+</tbody>
+</table>
+<h3>Tipos de dato</h3>
+<table class="docs-table">
+<thead><tr><th>Tipo</th><th>Cómo lo pide el bot</th></tr></thead>
+<tbody>
+<tr><td><strong>Texto libre</strong></td><td>Acepta cualquier respuesta de hasta 500 letras.</td></tr>
+<tr><td><strong>Teléfono</strong></td><td>Revisa que tenga forma de teléfono; si no, lo vuelve a pedir.</td></tr>
+<tr><td><strong>Correo</strong></td><td>Revisa que tenga forma de correo; si no, lo vuelve a pedir.</td></tr>
+<tr><td><strong>Elegir entre opciones</strong></td><td>Muestra de 2 a 8 botones (una opción por renglón al armarlo). Hay que elegir uno.</td></tr>
+</tbody>
+</table>
+<p>Un dato que no marcás como obligatorio muestra un botón <em>Omitir</em>. En cualquier momento el visitante puede tocar <strong>Cancelar</strong> y volver al menú sin dejar nada.</p>
+<div class="callout">
+<p>Mientras alguien llena un formulario, <strong>todo lo que escribe es la respuesta a la pregunta en curso</strong>: ni un aviso ni una pregunta fija lo interrumpen. Si editás o borrás el formulario, quien lo estaba llenando empieza de cero.</p>
+</div>
+<h2>Recibir los pedidos</h2>
+<p>Cuando el visitante responde el último dato, el pedido queda guardado y:</p>
+<ul>
+<li>Te llega un <strong>correo</strong> con todas las respuestas. Lo reciben los usuarios con acceso completo al panel, no los de <a href="/docs/usuarios.html">solo lectura</a>.</li>
+<li>Aparece en la pantalla <strong>Pedidos</strong>, lo último primero (se muestran los últimos 200).</li>
+</ul>
+<p>En <strong>Pedidos</strong> marcás cada uno como <strong>Atendido</strong> (o lo volvés a pendiente) y podés borrarlo. Borrar un formulario <strong>no</strong> borra los pedidos que ya llegaron.</p>
+<div class="callout warn">
+<p><strong>Son datos personales.</strong> Lo que deja el visitante (nombre, teléfono, correo) usalo solo para responderle, y borrá los pedidos que ya no necesites.</p>
+</div>
+<h2>Los formularios y tu plan</h2>
+<p>Los pasos intermedios no cuentan como preguntas de tu plan: solo cuenta una por cada formulario completado. Funcionan igual en el chat del sitio y en tu <a href="/docs/whatsapp.html">WhatsApp</a>.</p>
+<div class="docs-nav-footer">
+<a href="/docs/avisos.html">← Avisos por palabra clave</a>
+<a href="/docs/sin-respuesta.html">Sin respuesta →</a>
+</div>
+  </main>
+</div>
+
+<footer style="background:var(--dark);color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem;">
+  © 2026 LibraBot · parte de <a href="https://librasuite.com.ar" style="color:#94a3b8">LibraSuite</a> · <a href="/" style="color:#94a3b8">Inicio</a> · <a href="/legal/terminos.html" style="color:#94a3b8">Términos y condiciones</a>
+</footer>
+</body>
+</html>

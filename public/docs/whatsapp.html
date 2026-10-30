@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El bot en tu WhatsApp — Guía de LibraBot</title>
+  <meta name="description" content="Cómo hacer que LibraBot atienda también los mensajes que llegan al WhatsApp de tu empresa: activarlo, vincular el celular, atender y qué cuidados tener.">
+  <link rel="canonical" href="https://librabot.com.ar/docs/whatsapp.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="El bot en tu WhatsApp — Guía de LibraBot">
+  <meta property="og:description" content="Cómo hacer que LibraBot atienda también los mensajes que llegan al WhatsApp de tu empresa: activarlo, vincular el celular, atender y qué cuidados tener.">
+  <meta property="og:url" content="https://librabot.com.ar/docs/whatsapp.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="navbar-brand" style="text-decoration:none"><img src="/img/marca.svg" alt="" class="logo-icon" width="32" height="32">LibraBot</a>
+  <div class="navbar-links">
+    <a href="/#funciones">Qué hace</a>
+    <a href="/#planes">Planes</a>
+    <a href="/docs/" class="active" style="color:var(--brand)">Guía</a>
+    <a href="https://panel.librabot.com.ar" target="_blank" rel="noopener" class="btn-nav">Entrar al panel</a>
+  </div>
+</nav>
+
+<div class="docs-wrapper">
+  <nav class="docs-sidebar" aria-label="Guía">
+    <div class="docs-sidebar-section">Inicio</div>
+    <a href="/docs/">Introducción</a>
+    <a href="/docs/primeros-pasos.html">Primeros pasos</a>
+    <div class="docs-sidebar-section">Configurar tu bot</div>
+    <a href="/docs/sitio-web.html">Sitio web</a>
+    <a href="/docs/instalar.html">Instalarlo en tu sitio</a>
+    <a href="/docs/aspecto.html">Aspecto del chat</a>
+    <a href="/docs/mensajes.html">Bienvenida y botones de inicio</a>
+    <a href="/docs/preguntas-fijas.html">Preguntas fijas</a>
+    <a href="/docs/informacion.html">Información extra</a>
+    <a href="/docs/avisos.html">Avisos por palabra clave</a>
+    <a href="/docs/formularios.html">Formularios y pedidos</a>
+    <a href="/docs/sin-respuesta.html">Sin respuesta</a>
+    <div class="docs-sidebar-section">Atención</div>
+    <a href="/docs/atencion.html">Hablar con una persona</a>
+    <a href="/docs/whatsapp.html" class="active">El bot en tu WhatsApp</a>
+    <a href="/docs/cartel-qr.html">Cartel con el QR de WhatsApp</a>
+    <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>
+    <div class="docs-sidebar-section">Seguimiento</div>
+    <a href="/docs/actividad.html">Actividad</a>
+    <a href="/docs/historial.html">Historial de cambios</a>
+    <div class="docs-sidebar-section">Tu cuenta</div>
+    <a href="/docs/plan.html">Tu plan</a>
+    <a href="/docs/usuarios.html">Usuarios y solo lectura</a>
+    <a href="/docs/problemas.html">Problemas frecuentes</a>
+  </nav>
+
+  <main class="docs-content">
+    <h1>El bot en tu WhatsApp</h1>
+<p class="docs-lead">Que LibraBot atienda también los mensajes que llegan al WhatsApp de tu empresa, con el mismo menú y las mismas respuestas que en el chat del sitio.</p>
+<div class="callout warn">
+<p><strong>Leelo antes de activarlo.</strong> WhatsApp no permite oficialmente que un programa atienda un número vinculado con un código QR. Si lo detecta, puede bloquear el número de forma permanente, y LibraBot no puede revertirlo. Por eso conviene usar <strong>un número dedicado a la atención</strong> con <strong>WhatsApp Business</strong>, y no el principal de tu negocio. El bot solo contesta a quien te escribe primero y no manda mensajes masivos.</p>
+</div>
+<h2>1. Activar WhatsApp</h2>
+<p>En «Mi bot», tarjeta <strong>WhatsApp</strong>, tildá «Entiendo el riesgo y quiero activar WhatsApp» y tocá <strong>Activar WhatsApp</strong>. Queda anotado quién aceptó el riesgo y cuándo.</p>
+<h2>2. Vincular el celular</h2>
+<p>Tocá <strong>Vincular el celular</strong>. Se abre una ventana con los pasos y un código QR:</p>
+<ol class="step-list">
+<li>Abrí <strong>WhatsApp Business</strong> en el celular que tiene el chip de la línea.</li>
+<li>Tocá <strong>Menú</strong> (los tres puntitos) en Android, o <strong>Configuración</strong> en iPhone.</li>
+<li>Tocá <strong>Dispositivos vinculados</strong> y después <strong>Vincular un dispositivo</strong>.</li>
+<li>Apuntá el celular a la pantalla y escaneá el código.</li>
+</ol>
+<div class="callout warn">
+<p><strong>Escaneá el código solo con el celular de la línea.</strong> Si lo escanea otro celular, el bot atiende con el número equivocado. El código se renueva solo cada unos segundos, y la ventana se cierra sola cuando la línea queda conectada.</p>
+</div>
+<p>El estado de la línea se ve en la tarjeta: <strong>Conectada</strong>, <strong>Conectando…</strong>, <strong>Sin vincular</strong> o <strong>No se pudo consultar</strong> (se actualiza solo).</p>
+<h2>Qué hace el bot por WhatsApp</h2>
+<ul>
+<li><strong>Contesta lo mismo que en el chat:</strong> el saludo, las preguntas fijas con sus submenús, los <a href="/docs/avisos.html">avisos</a>, los <a href="/docs/formularios.html">formularios</a> y lo que lee de tu sitio y de la <a href="/docs/informacion.html">información extra</a>.</li>
+<li><strong>Los botones salen como un menú numerado.</strong> WhatsApp no admite botones en este tipo de línea, así que el bot escribe las opciones con un número y el contacto responde con el número. «Escribí <em>menu</em> para ver las opciones» vuelve al inicio.</li>
+<li><strong>Solo lee texto.</strong> Si el contacto manda un audio, una foto o un documento y la atención es desde el celular, el bot le avisa que por ahí solo puede leer texto.</li>
+</ul>
+<h2>Quién atiende a una persona</h2>
+<p>En la misma tarjeta elegís cómo se atiende cuando alguien pide hablar con una persona:</p>
+<table class="docs-table">
+<thead><tr><th>Modo</th><th>Cómo funciona</th></tr></thead>
+<tbody>
+<tr><td><strong>Desde el celular de la línea</strong></td><td>Atendés vos, desde el celular. Cuando escribís un mensaje en un chat, <strong>el bot se calla en ese chat</strong>. Vuelve cuando el contacto escribe «menu», o a las 12 horas de que escribiste.</td></tr>
+<tr><td><strong>En Chatwoot (varios operadores)</strong></td><td>Tu equipo contesta desde la bandeja «WhatsApp» de Chatwoot y lo que escribe un operador sale por tu WhatsApp. Mientras un operador tiene la conversación abierta, el bot se calla; al resolverla, el bot vuelve a atender. Lo que escribas desde el celular queda como nota privada. Está disponible desde el <a href="/docs/plan.html">plan Profesional</a>.</td></tr>
+</tbody>
+</table>
+<h3>Si atendés por Chatwoot</h3>
+<ul>
+<li>Mientras el bot atiende, la conversación figura como <strong>pendiente</strong>. En Chatwoot, el filtro <em>Abiertas</em> no muestra las pendientes: cambialo a <em>Pendientes</em> o <em>Todas</em> para verlas. Pasa a <em>abierta</em> cuando el contacto pide una persona o cuando un operador contesta.</li>
+<li>Los <strong>audios, fotos y documentos</strong> del contacto llegan como archivos, y los que adjuntes salen por WhatsApp.</li>
+<li>Más en <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>.</li>
+</ul>
+<h2>Avisos si se cae la línea</h2>
+<p>LibraBot revisa la línea cada pocos minutos. Si una línea que ya estuvo vinculada lleva <strong>más de 10 minutos desconectada</strong>, te mandamos un correo (a los usuarios con acceso completo y a nosotros), y otro cuando vuelve. Una caída corta no avisa, y una línea que todavía no vinculaste tampoco.</p>
+<p>Si llegó el correo: entrá a «Mi bot», tarjeta <strong>WhatsApp</strong>, y tocá <strong>Vincular el celular</strong>. Suele pasar si el celular se quedó sin internet o si se cerró la sesión desde «Dispositivos vinculados».</p>
+<h2>Quitar la línea</h2>
+<p>El botón <strong>Quitar la línea</strong> desvincula el celular y el bot deja de atender por WhatsApp. Podés volver a activarla cuando quieras.</p>
+<h2>Cuidados</h2>
+<ul>
+<li>Usá un número dedicado y WhatsApp Business.</li>
+<li>No vincules el mismo número en otro programa a la vez: se pisan las sesiones y la línea se corta una y otra vez.</li>
+<li>No mandes mensajes masivos con ese número.</li>
+<li>Mantené el celular encendido y con internet.</li>
+</ul>
+<div class="docs-nav-footer">
+<a href="/docs/atencion.html">← Hablar con una persona</a>
+<a href="/docs/cartel-qr.html">Cartel con el QR de WhatsApp →</a>
+</div>
+  </main>
+</div>
+
+<footer style="background:var(--dark);color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem;">
+  © 2026 LibraBot · parte de <a href="https://librasuite.com.ar" style="color:#94a3b8">LibraSuite</a> · <a href="/" style="color:#94a3b8">Inicio</a> · <a href="/legal/terminos.html" style="color:#94a3b8">Términos y condiciones</a>
+</footer>
+</body>
+</html>
