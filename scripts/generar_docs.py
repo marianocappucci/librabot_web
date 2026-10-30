@@ -24,14 +24,23 @@ MENU = [
         ("mensajes", "Bienvenida y botones de inicio", "Cómo escribir el saludo de tu bot y los botones de inicio que ven tus visitantes al abrir el chat."),
         ("preguntas-fijas", "Preguntas fijas", "Cómo cargar respuestas que LibraBot da siempre igual: horarios, medios de pago, envíos."),
         ("informacion", "Información extra", "Cómo cargar textos y PDF para que LibraBot responda con datos que no están en tu sitio."),
+        ("avisos", "Avisos por palabra clave", "Cómo hacer que LibraBot conteste un texto fijo cuando el visitante nombra una palabra clave: urgencias, lo que no hacés, avisos importantes."),
+        ("formularios", "Formularios y pedidos", "Cómo armar formularios para que LibraBot pida turnos, presupuestos o reclamos de a un dato por vez, y cómo recibir los pedidos."),
         ("sin-respuesta", "Sin respuesta", "Cómo ver lo que tus visitantes preguntaron y LibraBot no supo contestar, y convertirlo en una respuesta."),
     ]),
     ("Atención", [
         ("atencion", "Hablar con una persona", "Cómo configura LibraBot el pase a una persona: por tu WhatsApp o por el chat del sitio."),
+        ("whatsapp", "El bot en tu WhatsApp", "Cómo hacer que LibraBot atienda también los mensajes que llegan al WhatsApp de tu empresa: activarlo, vincular el celular, atender y qué cuidados tener."),
+        ("cartel-qr", "Cartel con el QR de WhatsApp", "Cómo armar e imprimir un cartel con un código QR para que tus clientes te escriban por WhatsApp."),
         ("conversaciones", "Conversaciones en Chatwoot", "Cómo entrar a Chatwoot desde el panel de LibraBot para ver y atender las conversaciones."),
+    ]),
+    ("Seguimiento", [
+        ("actividad", "Actividad", "Cómo ver cuántas preguntas recibe tu bot, cuáles se repiten más y cuáles no supo contestar, en los últimos 7, 30 o 90 días."),
+        ("historial", "Historial de cambios", "Cómo ver quién cambió qué en el panel de LibraBot y cuándo."),
     ]),
     ("Tu cuenta", [
         ("plan", "Tu plan", "Qué incluye cada plan de LibraBot, cómo ver tus preguntas del mes y cómo pedir un cambio de plan."),
+        ("usuarios", "Usuarios y solo lectura", "Cómo sumar a alguien de tu equipo que solo pueda mirar el panel de LibraBot, y cómo quitarlo."),
         ("problemas", "Problemas frecuentes", "Soluciones a lo más habitual en LibraBot: no llega el correo, el enlace venció, el chat no aparece, el cambio no se ve."),
     ]),
 ]
@@ -114,7 +123,7 @@ P = {}
 P["index"] = f"""    <h1>Guía de LibraBot</h1>
 <p class="docs-lead">Todo lo que necesitás para dejar tu chatbot andando en tu sitio y mantenerlo al día, paso a paso y sin saber de programación.</p>
 <h2>Qué es LibraBot</h2>
-<p>LibraBot es un asistente virtual que atiende a los visitantes de tu sitio web. Responde con lo que dice tu propio sitio y con la información que vos le cargues, y cuando no sabe o alguien pide hablar con una persona, le pasa la conversación a tu equipo o a tu WhatsApp.</p>
+<p>LibraBot es un asistente virtual que atiende a los visitantes de tu sitio web. Responde con lo que dice tu propio sitio y con la información que vos le cargues, tanto en el chat de tu sitio como, si querés, en el WhatsApp de tu empresa, y cuando no sabe o alguien pide hablar con una persona, le pasa la conversación a tu equipo o a tu WhatsApp.</p>
 <p>Lo manejás desde el <a href="{PANEL}" target="_blank" rel="noopener">panel de LibraBot</a>: ahí cambiás el saludo, cargás respuestas, ves qué no supo contestar y copiás el código que va en tu sitio.</p>
 <h2>Por dónde empezar</h2>
 <ol class="step-list">
@@ -131,10 +140,15 @@ P["index"] = f"""    <h1>Guía de LibraBot</h1>
 <table class="docs-table">
 <thead><tr><th>Pantalla</th><th>Qué permite hacer</th></tr></thead>
 <tbody>
-<tr><td><strong>Mi bot</strong></td><td>La pantalla de inicio: sitio, código para pegar, saludo, botones, aspecto del chat, atención de una persona, tu plan y las conversaciones. Ver <a href="/docs/sitio-web.html">Sitio web</a>, <a href="/docs/instalar.html">Instalarlo en tu sitio</a>, <a href="/docs/aspecto.html">Aspecto del chat</a> y <a href="/docs/mensajes.html">Bienvenida y botones</a></td></tr>
-<tr><td><strong>Preguntas fijas</strong></td><td>Respuestas que el bot da siempre igual. Ver <a href="/docs/preguntas-fijas.html">Preguntas fijas</a></td></tr>
+<tr><td><strong>Mi bot</strong></td><td>La pantalla de inicio: sitio, código para pegar, saludo, botones, aspecto del chat, atención de una persona, WhatsApp, cartel con QR, tu plan y las conversaciones. Ver <a href="/docs/sitio-web.html">Sitio web</a>, <a href="/docs/instalar.html">Instalarlo en tu sitio</a>, <a href="/docs/aspecto.html">Aspecto del chat</a>, <a href="/docs/mensajes.html">Bienvenida y botones</a>, <a href="/docs/atencion.html">Hablar con una persona</a>, <a href="/docs/whatsapp.html">WhatsApp</a>, <a href="/docs/cartel-qr.html">Cartel con QR</a> y <a href="/docs/plan.html">Tu plan</a></td></tr>
+<tr><td><strong>Actividad</strong></td><td>Cuántas preguntas recibe tu bot y cuáles se repiten. Ver <a href="/docs/actividad.html">Actividad</a></td></tr>
+<tr><td><strong>Preguntas fijas</strong></td><td>Respuestas que el bot da siempre igual, con submenús. Ver <a href="/docs/preguntas-fijas.html">Preguntas fijas</a></td></tr>
+<tr><td><strong>Avisos</strong></td><td>Un texto fijo cuando el visitante nombra una palabra clave. Ver <a href="/docs/avisos.html">Avisos</a></td></tr>
+<tr><td><strong>Formularios</strong> y <strong>Pedidos</strong></td><td>Pedir datos de a uno y recibir lo que dejan. Ver <a href="/docs/formularios.html">Formularios y pedidos</a></td></tr>
 <tr><td><strong>Información</strong></td><td>Textos y PDF extra para el bot. Ver <a href="/docs/informacion.html">Información extra</a></td></tr>
 <tr><td><strong>Sin respuesta</strong></td><td>Lo que preguntaron y el bot no supo contestar. Ver <a href="/docs/sin-respuesta.html">Sin respuesta</a></td></tr>
+<tr><td><strong>Historial</strong></td><td>Quién cambió qué y cuándo. Ver <a href="/docs/historial.html">Historial de cambios</a></td></tr>
+<tr><td><strong>Usuarios</strong></td><td>Sumar gente de solo lectura. Ver <a href="/docs/usuarios.html">Usuarios y solo lectura</a></td></tr>
 <tr><td><strong>Ayuda</strong></td><td>Un acceso a esta guía desde el panel</td></tr>
 </tbody>
 </table>
@@ -263,10 +277,14 @@ P["preguntas-fijas"] = """    <h1>Preguntas fijas</h1>
 <tr><td><strong>Respuesta</strong></td><td>El texto que el bot va a dar, igual cada vez.</td></tr>
 <tr><td><strong>Otras formas de preguntarlo</strong></td><td>Variantes, una por línea. Ejemplo: «¿hacen factura A?». Ayudan a que el bot reconozca la pregunta aunque la escriban distinto.</td></tr>
 <tr><td><strong>Mostrar en el menú de botones</strong></td><td>Si la tildás, la pregunta aparece como botón en el menú del chat.</td></tr>
+<tr><td><strong>Dentro de</strong></td><td>Para armar un submenú: elegí otra pregunta y esta pasa a ser un botón que aparece al tocarla. Se puede anidar hasta tres niveles. Dentro de un submenú el bot ofrece un botón para volver.</td></tr>
 <tr><td><strong>Orden</strong></td><td>Un número: define en qué lugar aparece en el menú. Las de número más bajo van primero.</td></tr>
 </tbody>
 </table>
 <p>Para cambiar o borrar una pregunta, usá los botones de su fila en la lista.</p>
+<h2>Armar un submenú</h2>
+<p>Si tenés muchas respuestas, agrupalas. Por ejemplo, una pregunta fija «Medios de pago» con la respuesta «Estas son las formas de pago», y dentro de ella «¿Aceptan tarjeta?» y «¿Hacen factura A?» con la opción <strong>Dentro de → Medios de pago</strong>. Al tocar «Medios de pago», el bot muestra esas dos como botones.</p>
+<p>La pregunta que agrupa las demás se muestra en el menú del chat; las de adentro solo aparecen al entrar a ella.</p>
 <div class="callout success">
 <p><strong>Un buen hábito:</strong> mirá cada tanto <a href="/docs/sin-respuesta.html">Sin respuesta</a>. Lo que se repite ahí es lo primero que conviene convertir en pregunta fija.</p>
 </div>"""
@@ -318,7 +336,17 @@ P["atencion"] = """    <h1>Hablar con una persona</h1>
 </div>
 <h2>Cargar tu WhatsApp</h2>
 <p>En «Mi bot», sección <strong>Atención de una persona</strong>, escribí el número en el campo «WhatsApp para derivar» y tocá <strong>Guardar</strong>. Va con el código de país (54) y el 9, sin el 0 ni el 15. Por ejemplo: <code>549 2324 123456</code>.</p>
-<p>Al guardarlo, el panel te muestra un enlace para probarlo: tocalo y fijate que abra la conversación con tu número.</p>"""
+<p>Al guardarlo, el panel te muestra un enlace para probarlo: tocalo y fijate que abra la conversación con tu número.</p>
+<h2>Preguntar el nombre antes de pasar con una persona</h2>
+<p>En la misma tarjeta hay un interruptor: <strong>Preguntar el nombre cuando piden hablar con una persona</strong>. Está apagado de entrada. Si lo prendés, antes de pasar la conversación el bot pregunta «¿cómo te llamás?» y recién después deriva, así tu equipo sabe con quién habla.</p>
+<ul>
+<li>Si el visitante escribe algo que no parece un nombre, el bot se lo vuelve a pedir; con <strong>Cancelar</strong> vuelve al menú.</li>
+<li>Con la atención por tu WhatsApp, el nombre viaja en el mensaje («Soy Ana») cuando el visitante toca el enlace.</li>
+<li>Con la atención en el chat, tu equipo ve el nombre en Chatwoot, como nota privada y como nombre del contacto.</li>
+<li>En WhatsApp, si el contacto ya tiene un nombre en su perfil, el bot no se lo pregunta.</li>
+</ul>
+<h2>También por WhatsApp</h2>
+<p>Si además querés que el bot atienda los mensajes que llegan al WhatsApp de tu empresa, mirá <a href="/docs/whatsapp.html">El bot en tu WhatsApp</a>.</p>"""
 
 P["conversaciones"] = f"""    <h1>Conversaciones en Chatwoot</h1>
 <p class="docs-lead">Dónde ver lo que hablaron tus visitantes con el bot y dónde atender cuando hace falta una persona.</p>
@@ -385,9 +413,240 @@ P["problemas"] = f"""    <h1>Problemas frecuentes</h1>
 <p>Cargá la respuesta correcta como <a href="/docs/preguntas-fijas.html">pregunta fija</a>: el bot la da siempre tal cual, sin cambiarle una palabra.</p>
 <h3>Se quedó leyendo mi sitio y no termina</h3>
 <p>Un sitio con muchas páginas puede tardar varios minutos. Podés seguir usando el panel mientras tanto. Si pasa mucho tiempo y sigue igual, escribinos.</p>
+<h3>Me llegó un correo diciendo que la línea de WhatsApp está desconectada</h3>
+<p>Entrá a «Mi bot», tarjeta <strong>WhatsApp</strong>, y tocá <strong>Vincular el celular</strong>. Suele pasar si el celular se quedó sin internet o si se cerró la sesión en «Dispositivos vinculados». Más en <a href="/docs/whatsapp.html">El bot en tu WhatsApp</a>.</p>
+<h3>El bot no contesta en un chat de WhatsApp</h3>
+<p>Si escribiste vos desde el celular de la línea, el bot se calla en ese chat. Vuelve cuando el contacto escribe <em>menu</em> o pasadas 12 horas. Si el estado de la tarjeta no dice <strong>Conectada</strong>, vinculá el celular de nuevo.</p>
+<h3>No veo las conversaciones de WhatsApp en Chatwoot</h3>
+<p>Mientras el bot atiende, la conversación figura como <em>pendiente</em> y el filtro <em>Abiertas</em> no la muestra. Cambialo a <em>Pendientes</em> o <em>Todas</em>.</p>
+<h3>Los pedidos de mis formularios no me llegan por correo</h3>
+<p>Entrá a la pantalla <strong>Pedidos</strong>: el pedido está guardado aunque el correo no haya salido. Lo reciben los usuarios con acceso completo (no los de solo lectura); revisá también la carpeta de spam.</p>
+<h3>El panel dice «Tu usuario es de solo lectura»</h3>
+<p>Tu usuario puede mirar pero no cambiar nada. Si necesitás editar, pedile al responsable de la cuenta que lo haga o que te dé acceso completo escribiéndonos por <a href="{WA}" target="_blank" rel="noopener">WhatsApp</a>.</p>
 <div class="callout">
 <p><strong>¿Nada de esto lo resuelve?</strong> Escribinos por <a href="{WA}" target="_blank" rel="noopener">WhatsApp</a> contando qué pasó y desde qué pantalla.</p>
 </div>"""
+
+P["avisos"] = """    <h1>Avisos por palabra clave</h1>
+<p class="docs-lead">Un texto fijo que el bot da apenas el visitante nombra ciertas palabras: lo urgente, lo que no hacés, lo que no puede esperar.</p>
+<h2>Para qué sirven</h2>
+<p>Hay cosas que no conviene que terminen en un menú ni en una respuesta improvisada. Por ejemplo:</p>
+<ul>
+<li><strong>Urgencias:</strong> «Ante una emergencia llamá al 107.»</li>
+<li><strong>Lo que no hacés:</strong> «No hacemos envíos al exterior.»</li>
+<li><strong>Un aviso del momento:</strong> «Esta semana estamos cerrados por vacaciones.»</li>
+</ul>
+<p>Cuando lo que escribe el visitante nombra alguna de las palabras clave, el bot contesta tu aviso y <strong>nada más</strong>: no sigue con el menú, no consulta tu sitio ni pasa con una persona. Después del aviso queda un botón <em>Ver opciones</em> para volver al menú.</p>
+<h2>Cargar un aviso</h2>
+<p>En la pantalla <strong>Avisos</strong>, tocá <strong>Nuevo aviso</strong> y completá:</p>
+<table class="docs-table">
+<thead><tr><th>Campo</th><th>Qué poner</th></tr></thead>
+<tbody>
+<tr><td><strong>Nombre</strong></td><td>Cómo lo reconocés vos en la lista. Ejemplo: «Urgencias».</td></tr>
+<tr><td><strong>Palabras clave</strong></td><td>Una o más, separadas por coma o una por renglón. Cada una con al menos 3 letras. Pueden ser frases: «envío al exterior».</td></tr>
+<tr><td><strong>Qué contesta el bot</strong></td><td>El texto del aviso, igual cada vez.</td></tr>
+</tbody>
+</table>
+<p>Podés tener hasta 10 avisos. Para cambiar o borrar uno, usá los botones de su fila.</p>
+<h2>Cómo se comparan las palabras</h2>
+<ul>
+<li>No importan las mayúsculas, los acentos ni los signos: «URGENCIA!!» y «urgencia» son lo mismo.</li>
+<li>Se compara <strong>palabra entera</strong>: la clave «urgencia» no se dispara con «urgencias». Si querés cubrir las dos formas, cargá las dos.</li>
+<li>Una frase clave tiene que estar completa y en orden: «envío al exterior» no se dispara con solo «envío».</li>
+<li>Si dos avisos coinciden, gana el que está primero en la lista.</li>
+</ul>
+<div class="callout warn">
+<p><strong>Un aviso gana sobre todo lo demás</strong>, incluso sobre una pregunta fija o sobre un pedido de hablar con una persona. Usá palabras bien específicas: una palabra muy común haría que el bot conteste el aviso en cualquier conversación.</p>
+</div>
+<p>Los avisos funcionan igual en el chat de tu sitio y en tu <a href="/docs/whatsapp.html">WhatsApp</a>, y también si tu bot está en modo cerrado.</p>"""
+
+P["formularios"] = """    <h1>Formularios y pedidos</h1>
+<p class="docs-lead">Que el bot pida los datos de a uno (nombre, teléfono, qué necesita) y te deje un pedido listo para atender.</p>
+<h2>Para qué sirven</h2>
+<p>Para tomar un turno, un presupuesto, un reclamo o una consulta sin que el visitante tenga que escribir todo de una vez. Cada formulario aparece como un <strong>botón del menú del chat</strong>: al tocarlo, el bot hace las preguntas una por una y al final te deja un pedido.</p>
+<h2>Armar un formulario</h2>
+<p>En la pantalla <strong>Formularios</strong>, tocá <strong>Nuevo formulario</strong>:</p>
+<table class="docs-table">
+<thead><tr><th>Campo</th><th>Qué poner</th></tr></thead>
+<tbody>
+<tr><td><strong>Nombre</strong></td><td>Es el texto del botón del chat. Ejemplo: «Pedir presupuesto». No puede repetirse entre tus formularios.</td></tr>
+<tr><td><strong>Qué dice antes de la primera pregunta</strong></td><td>Opcional. Ejemplo: «Armamos tu presupuesto en un minuto.»</td></tr>
+<tr><td><strong>Datos que pide</strong></td><td>De 1 a 12. Cada uno tiene su pregunta, su tipo y si es obligatorio. El orden se cambia con las flechas.</td></tr>
+<tr><td><strong>Qué dice al terminar</strong></td><td>Opcional. Si lo dejás vacío, el bot dice que recibió los datos y que le van a responder.</td></tr>
+<tr><td><strong>Mostrar un botón en el menú</strong></td><td>Si lo destildás, el formulario no aparece en el menú, pero se puede empezar escribiendo su nombre.</td></tr>
+</tbody>
+</table>
+<h3>Tipos de dato</h3>
+<table class="docs-table">
+<thead><tr><th>Tipo</th><th>Cómo lo pide el bot</th></tr></thead>
+<tbody>
+<tr><td><strong>Texto libre</strong></td><td>Acepta cualquier respuesta de hasta 500 letras.</td></tr>
+<tr><td><strong>Teléfono</strong></td><td>Revisa que tenga forma de teléfono; si no, lo vuelve a pedir.</td></tr>
+<tr><td><strong>Correo</strong></td><td>Revisa que tenga forma de correo; si no, lo vuelve a pedir.</td></tr>
+<tr><td><strong>Elegir entre opciones</strong></td><td>Muestra de 2 a 8 botones (una opción por renglón al armarlo). Hay que elegir uno.</td></tr>
+</tbody>
+</table>
+<p>Un dato que no marcás como obligatorio muestra un botón <em>Omitir</em>. En cualquier momento el visitante puede tocar <strong>Cancelar</strong> y volver al menú sin dejar nada.</p>
+<div class="callout">
+<p>Mientras alguien llena un formulario, <strong>todo lo que escribe es la respuesta a la pregunta en curso</strong>: ni un aviso ni una pregunta fija lo interrumpen. Si editás o borrás el formulario, quien lo estaba llenando empieza de cero.</p>
+</div>
+<h2>Recibir los pedidos</h2>
+<p>Cuando el visitante responde el último dato, el pedido queda guardado y:</p>
+<ul>
+<li>Te llega un <strong>correo</strong> con todas las respuestas. Lo reciben los usuarios con acceso completo al panel, no los de <a href="/docs/usuarios.html">solo lectura</a>.</li>
+<li>Aparece en la pantalla <strong>Pedidos</strong>, lo último primero (se muestran los últimos 200).</li>
+</ul>
+<p>En <strong>Pedidos</strong> marcás cada uno como <strong>Atendido</strong> (o lo volvés a pendiente) y podés borrarlo. Borrar un formulario <strong>no</strong> borra los pedidos que ya llegaron.</p>
+<div class="callout warn">
+<p><strong>Son datos personales.</strong> Lo que deja el visitante (nombre, teléfono, correo) usalo solo para responderle, y borrá los pedidos que ya no necesites.</p>
+</div>
+<h2>Los formularios y tu plan</h2>
+<p>Los pasos intermedios no cuentan como preguntas de tu plan: solo cuenta una por cada formulario completado. Funcionan igual en el chat del sitio y en tu <a href="/docs/whatsapp.html">WhatsApp</a>.</p>"""
+
+P["whatsapp"] = """    <h1>El bot en tu WhatsApp</h1>
+<p class="docs-lead">Que LibraBot atienda también los mensajes que llegan al WhatsApp de tu empresa, con el mismo menú y las mismas respuestas que en el chat del sitio.</p>
+<div class="callout warn">
+<p><strong>Leelo antes de activarlo.</strong> WhatsApp no permite oficialmente que un programa atienda un número vinculado con un código QR. Si lo detecta, puede bloquear el número de forma permanente, y LibraBot no puede revertirlo. Por eso conviene usar <strong>un número dedicado a la atención</strong> con <strong>WhatsApp Business</strong>, y no el principal de tu negocio. El bot solo contesta a quien te escribe primero y no manda mensajes masivos.</p>
+</div>
+<h2>1. Activar WhatsApp</h2>
+<p>En «Mi bot», tarjeta <strong>WhatsApp</strong>, tildá «Entiendo el riesgo y quiero activar WhatsApp» y tocá <strong>Activar WhatsApp</strong>. Queda anotado quién aceptó el riesgo y cuándo.</p>
+<h2>2. Vincular el celular</h2>
+<p>Tocá <strong>Vincular el celular</strong>. Se abre una ventana con los pasos y un código QR:</p>
+<ol class="step-list">
+<li>Abrí <strong>WhatsApp Business</strong> en el celular que tiene el chip de la línea.</li>
+<li>Tocá <strong>Menú</strong> (los tres puntitos) en Android, o <strong>Configuración</strong> en iPhone.</li>
+<li>Tocá <strong>Dispositivos vinculados</strong> y después <strong>Vincular un dispositivo</strong>.</li>
+<li>Apuntá el celular a la pantalla y escaneá el código.</li>
+</ol>
+<div class="callout warn">
+<p><strong>Escaneá el código solo con el celular de la línea.</strong> Si lo escanea otro celular, el bot atiende con el número equivocado. El código se renueva solo cada unos segundos, y la ventana se cierra sola cuando la línea queda conectada.</p>
+</div>
+<p>El estado de la línea se ve en la tarjeta: <strong>Conectada</strong>, <strong>Conectando…</strong>, <strong>Sin vincular</strong> o <strong>No se pudo consultar</strong> (se actualiza solo).</p>
+<h2>Qué hace el bot por WhatsApp</h2>
+<ul>
+<li><strong>Contesta lo mismo que en el chat:</strong> el saludo, las preguntas fijas con sus submenús, los <a href="/docs/avisos.html">avisos</a>, los <a href="/docs/formularios.html">formularios</a> y lo que lee de tu sitio y de la <a href="/docs/informacion.html">información extra</a>.</li>
+<li><strong>Los botones salen como un menú numerado.</strong> WhatsApp no admite botones en este tipo de línea, así que el bot escribe las opciones con un número y el contacto responde con el número. «Escribí <em>menu</em> para ver las opciones» vuelve al inicio.</li>
+<li><strong>Solo lee texto.</strong> Si el contacto manda un audio, una foto o un documento y la atención es desde el celular, el bot le avisa que por ahí solo puede leer texto.</li>
+</ul>
+<h2>Quién atiende a una persona</h2>
+<p>En la misma tarjeta elegís cómo se atiende cuando alguien pide hablar con una persona:</p>
+<table class="docs-table">
+<thead><tr><th>Modo</th><th>Cómo funciona</th></tr></thead>
+<tbody>
+<tr><td><strong>Desde el celular de la línea</strong></td><td>Atendés vos, desde el celular. Cuando escribís un mensaje en un chat, <strong>el bot se calla en ese chat</strong>. Vuelve cuando el contacto escribe «menu», o a las 12 horas de que escribiste.</td></tr>
+<tr><td><strong>En Chatwoot (varios operadores)</strong></td><td>Tu equipo contesta desde la bandeja «WhatsApp» de Chatwoot y lo que escribe un operador sale por tu WhatsApp. Mientras un operador tiene la conversación abierta, el bot se calla; al resolverla, el bot vuelve a atender. Lo que escribas desde el celular queda como nota privada. Está disponible desde el <a href="/docs/plan.html">plan Profesional</a>.</td></tr>
+</tbody>
+</table>
+<h3>Si atendés por Chatwoot</h3>
+<ul>
+<li>Mientras el bot atiende, la conversación figura como <strong>pendiente</strong>. En Chatwoot, el filtro <em>Abiertas</em> no muestra las pendientes: cambialo a <em>Pendientes</em> o <em>Todas</em> para verlas. Pasa a <em>abierta</em> cuando el contacto pide una persona o cuando un operador contesta.</li>
+<li>Los <strong>audios, fotos y documentos</strong> del contacto llegan como archivos, y los que adjuntes salen por WhatsApp.</li>
+<li>Más en <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>.</li>
+</ul>
+<h2>Avisos si se cae la línea</h2>
+<p>LibraBot revisa la línea cada pocos minutos. Si una línea que ya estuvo vinculada lleva <strong>más de 10 minutos desconectada</strong>, te mandamos un correo (a los usuarios con acceso completo y a nosotros), y otro cuando vuelve. Una caída corta no avisa, y una línea que todavía no vinculaste tampoco.</p>
+<p>Si llegó el correo: entrá a «Mi bot», tarjeta <strong>WhatsApp</strong>, y tocá <strong>Vincular el celular</strong>. Suele pasar si el celular se quedó sin internet o si se cerró la sesión desde «Dispositivos vinculados».</p>
+<h2>Quitar la línea</h2>
+<p>El botón <strong>Quitar la línea</strong> desvincula el celular y el bot deja de atender por WhatsApp. Podés volver a activarla cuando quieras.</p>
+<h2>Cuidados</h2>
+<ul>
+<li>Usá un número dedicado y WhatsApp Business.</li>
+<li>No vincules el mismo número en otro programa a la vez: se pisan las sesiones y la línea se corta una y otra vez.</li>
+<li>No mandes mensajes masivos con ese número.</li>
+<li>Mantené el celular encendido y con internet.</li>
+</ul>"""
+
+P["cartel-qr"] = """    <h1>Cartel con el QR de WhatsApp</h1>
+<p class="docs-lead">Un cartel para imprimir y pegar en tu local o en el mostrador: quien escanea el código abre un chat con tu WhatsApp.</p>
+<h2>Armar el cartel</h2>
+<ol class="step-list">
+<li>En «Mi bot», tarjeta <strong>Cartel con el QR de WhatsApp</strong>, escribí el WhatsApp de la empresa <strong>con el código de país</strong>. Por ejemplo: <code>54 9 11 2345 6789</code>. Si ya cargaste un número para la atención por WhatsApp, viene cargado.</li>
+<li>Tocá <strong>Armar el cartel</strong>: se abre una vista previa.</li>
+<li><strong>Probalo con la cámara de tu celular</strong> antes de imprimir: tiene que abrir WhatsApp con tu número.</li>
+<li>Tocá <strong>Imprimir</strong>. El cartel sale solo, a hoja completa, en blanco y negro.</li>
+</ol>
+<h2>Qué dice</h2>
+<p>«Escribinos por WhatsApp», el código QR, «Escaneá el código con la cámara de tu celular», el nombre de tu empresa y tu número. Al escanear, se abre un chat con tu número y un primer mensaje armado: «Hola, los vi por el cartel.»</p>
+<div class="callout">
+<p><strong>El código lleva a un chat con ese número.</strong> Si querés que lo atienda el bot, el número tiene que ser el de la línea que vinculaste en <a href="/docs/whatsapp.html">El bot en tu WhatsApp</a>. Si es otro número, lo atiende quien lo tenga.</p>
+</div>
+<div class="callout warn">
+<p>Siempre sale en blanco y negro, aunque uses el panel en modo oscuro: es un papel y el código necesita contraste para leerse bien. Imprimilo en un tamaño que se pueda escanear a un par de pasos.</p>
+</div>"""
+
+P["actividad"] = """    <h1>Actividad</h1>
+<p class="docs-lead">Qué le preguntan a tu bot, cuánto, y qué no supo contestar.</p>
+<h2>Elegir el período</h2>
+<p>En la pantalla <strong>Actividad</strong>, arriba, elegís <strong>Últimos 7 días</strong>, <strong>30 días</strong> o <strong>90 días</strong> (hoy incluido).</p>
+<h2>Qué muestra</h2>
+<table class="docs-table">
+<thead><tr><th>Qué</th><th>Qué significa</th></tr></thead>
+<tbody>
+<tr><td><strong>Preguntas</strong></td><td>Cuántas preguntas respondió el bot y en cuántas conversaciones.</td></tr>
+<tr><td><strong>Contestadas por el bot</strong></td><td>El porcentaje de esas preguntas que pudo contestar.</td></tr>
+<tr><td><strong>Sin respuesta</strong></td><td>Cuántas no supo contestar.</td></tr>
+<tr><td><strong>Pasaron a una persona</strong></td><td>Cuántas conversaciones del período terminaron derivadas a tu equipo.</td></tr>
+<tr><td><strong>Preguntas por día</strong></td><td>Un gráfico de barras; si pasás el mouse por una barra ves el día y la cantidad.</td></tr>
+<tr><td><strong>Lo más preguntado</strong></td><td>Las 10 preguntas que más se repiten, con cuántas veces y la última vez.</td></tr>
+<tr><td><strong>Lo que el bot no supo contestar</strong></td><td>Las 15 más repetidas, agrupadas, con el botón <strong>Crear pregunta fija</strong>.</td></tr>
+</tbody>
+</table>
+<h2>Cómo cuenta</h2>
+<ul>
+<li>Una pregunta es un mensaje del visitante que el bot contestó. <strong>No cuentan</strong> el saludo ni «menú», ni lo que contesta una persona de tu equipo, ni los pasos de un <a href="/docs/formularios.html">formulario</a> (solo el último).</li>
+<li>Agrupa las que se escriben casi igual: «¿Cuál es el horario?» y «cual es el horario» cuentan como una. No agrupa por significado: «horario» y «a qué hora abren» quedan separadas.</li>
+<li>Los días son de hora argentina; los días sin preguntas figuran en cero.</li>
+</ul>
+<h2>Qué hacer con esto</h2>
+<p>Lo que más se repite en «Lo que el bot no supo contestar» es lo primero que conviene convertir en <a href="/docs/preguntas-fijas.html">pregunta fija</a>. Para ver cada pregunta suelta con su fecha, mirá <a href="/docs/sin-respuesta.html">Sin respuesta</a>.</p>"""
+
+P["historial"] = """    <h1>Historial de cambios</h1>
+<p class="docs-lead">Quién cambió qué en el panel, y cuándo.</p>
+<h2>Qué registra</h2>
+<p>En la pantalla <strong>Historial</strong> ves, lo último primero, los cambios que se hicieron en:</p>
+<ul>
+<li>Los <strong>ajustes del bot</strong> (bienvenida, sitio, botones, color, nombre del asistente, atención de una persona, etc.).</li>
+<li>Las <strong>preguntas fijas</strong>.</li>
+<li>Los <strong>avisos</strong> y los <strong>formularios</strong>.</li>
+<li>La <strong>información</strong> que cargaste.</li>
+</ul>
+<p>De cada cambio se ve quién lo hizo, cuándo y qué hizo (creó, cambió, borró). En las ediciones aparece el <strong>antes y el después</strong> de cada campo.</p>
+<h2>Qué no muestra</h2>
+<ul>
+<li><strong>Claves, tokens y textos largos:</strong> el historial dice que cambiaron, pero no copia a qué. Se ve como «cambió».</li>
+<li><strong>Lo que hace el sistema solo</strong>, como la lectura nocturna de tu sitio.</li>
+<li><strong>Los pedidos de los formularios</strong>, porque llevan datos personales de tus visitantes.</li>
+<li>Cambios anteriores a la fecha en que se activó el historial.</li>
+</ul>
+<div class="callout">
+<p>Los cambios que hace el equipo de LibraBot por vos (por ejemplo, un cambio de plan) aparecen a nombre de <strong>Soporte de LibraBot</strong>. Se muestran los últimos 100 cambios.</p>
+</div>
+<p>Es útil cuando algo cambió y no sabés por qué: acá ves quién fue y qué valor tenía antes.</p>"""
+
+P["usuarios"] = """    <h1>Usuarios y solo lectura</h1>
+<p class="docs-lead">Sumar a alguien de tu equipo que pueda mirar el panel sin poder cambiar nada.</p>
+<h2>Para qué sirve</h2>
+<p>Quien te dio de alta es el responsable de la cuenta y puede hacer todo. Si querés que un socio, un contador o alguien de ventas vea la actividad, las preguntas y el historial sin riesgo de cambiar algo por error, le das un usuario de <strong>solo lectura</strong>.</p>
+<h2>Sumar a alguien</h2>
+<ol class="step-list">
+<li>Entrá a la pantalla <strong>Usuarios</strong>.</li>
+<li>En «Sumar a alguien de solo lectura», escribí su nombre y su correo y tocá <strong>Invitar</strong>.</li>
+<li>A esa persona le llega un correo para <strong>elegir su contraseña</strong>. Su usuario es su correo.</li>
+</ol>
+<p>Podés sumar hasta 10. Si el correo no sale, el usuario queda creado igual y la persona puede pedir el enlace desde «¿Olvidaste tu contraseña?» al ingresar.</p>
+<h2>Qué puede y qué no</h2>
+<table class="docs-table">
+<thead><tr><th>Puede</th><th>No puede</th></tr></thead>
+<tbody>
+<tr><td>Mirar todas las pantallas: Mi bot, Actividad, Preguntas fijas, Avisos, Formularios, Pedidos, Información, Sin respuesta, Historial y Usuarios.<br>Cambiar su propia contraseña.</td><td>Crear, editar ni borrar nada.<br>Marcar pedidos como atendidos.<br>Pedir un cambio de plan.<br>Entrar a Chatwoot.<br>Ver el código QR para vincular el celular.<br>Aceptar los Términos.<br>Sumar a otras personas.</td></tr>
+</tbody>
+</table>
+<p>Quien tiene este usuario ve un aviso arriba, «Tu usuario es de solo lectura», y los botones y campos aparecen apagados. Si intenta cambiar algo igual, el panel se lo rechaza.</p>
+<div class="callout">
+<p>Los <strong>correos de pedidos</strong> de los formularios los reciben solo los usuarios con acceso completo, no los de solo lectura.</p>
+</div>
+<h2>Quitar a alguien</h2>
+<p>En la lista, tocá el ícono de eliminar de su fila y confirmá. Esa persona deja de poder entrar; se la puede volver a invitar cuando quieras. El responsable de la cuenta no se puede quitar desde acá.</p>"""
 
 # --- escritura -----------------------------------------------------------------------------------------------------
 titulos = {a: (t, d) for _, items in MENU for a, t, d in items}

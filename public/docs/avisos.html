@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avisos por palabra clave — Guía de LibraBot</title>
+  <meta name="description" content="Cómo hacer que LibraBot conteste un texto fijo cuando el visitante nombra una palabra clave: urgencias, lo que no hacés, avisos importantes.">
+  <link rel="canonical" href="https://librabot.com.ar/docs/avisos.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Avisos por palabra clave — Guía de LibraBot">
+  <meta property="og:description" content="Cómo hacer que LibraBot conteste un texto fijo cuando el visitante nombra una palabra clave: urgencias, lo que no hacés, avisos importantes.">
+  <meta property="og:url" content="https://librabot.com.ar/docs/avisos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="navbar-brand" style="text-decoration:none"><img src="/img/marca.svg" alt="" class="logo-icon" width="32" height="32">LibraBot</a>
+  <div class="navbar-links">
+    <a href="/#funciones">Qué hace</a>
+    <a href="/#planes">Planes</a>
+    <a href="/docs/" class="active" style="color:var(--brand)">Guía</a>
+    <a href="https://panel.librabot.com.ar" target="_blank" rel="noopener" class="btn-nav">Entrar al panel</a>
+  </div>
+</nav>
+
+<div class="docs-wrapper">
+  <nav class="docs-sidebar" aria-label="Guía">
+    <div class="docs-sidebar-section">Inicio</div>
+    <a href="/docs/">Introducción</a>
+    <a href="/docs/primeros-pasos.html">Primeros pasos</a>
+    <div class="docs-sidebar-section">Configurar tu bot</div>
+    <a href="/docs/sitio-web.html">Sitio web</a>
+    <a href="/docs/instalar.html">Instalarlo en tu sitio</a>
+    <a href="/docs/aspecto.html">Aspecto del chat</a>
+    <a href="/docs/mensajes.html">Bienvenida y botones de inicio</a>
+    <a href="/docs/preguntas-fijas.html">Preguntas fijas</a>
+    <a href="/docs/informacion.html">Información extra</a>
+    <a href="/docs/avisos.html" class="active">Avisos por palabra clave</a>
+    <a href="/docs/formularios.html">Formularios y pedidos</a>
+    <a href="/docs/sin-respuesta.html">Sin respuesta</a>
+    <div class="docs-sidebar-section">Atención</div>
+    <a href="/docs/atencion.html">Hablar con una persona</a>
+    <a href="/docs/whatsapp.html">El bot en tu WhatsApp</a>
+    <a href="/docs/cartel-qr.html">Cartel con el QR de WhatsApp</a>
+    <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>
+    <div class="docs-sidebar-section">Seguimiento</div>
+    <a href="/docs/actividad.html">Actividad</a>
+    <a href="/docs/historial.html">Historial de cambios</a>
+    <div class="docs-sidebar-section">Tu cuenta</div>
+    <a href="/docs/plan.html">Tu plan</a>
+    <a href="/docs/usuarios.html">Usuarios y solo lectura</a>
+    <a href="/docs/problemas.html">Problemas frecuentes</a>
+  </nav>
+
+  <main class="docs-content">
+    <h1>Avisos por palabra clave</h1>
+<p class="docs-lead">Un texto fijo que el bot da apenas el visitante nombra ciertas palabras: lo urgente, lo que no hacés, lo que no puede esperar.</p>
+<h2>Para qué sirven</h2>
+<p>Hay cosas que no conviene que terminen en un menú ni en una respuesta improvisada. Por ejemplo:</p>
+<ul>
+<li><strong>Urgencias:</strong> «Ante una emergencia llamá al 107.»</li>
+<li><strong>Lo que no hacés:</strong> «No hacemos envíos al exterior.»</li>
+<li><strong>Un aviso del momento:</strong> «Esta semana estamos cerrados por vacaciones.»</li>
+</ul>
+<p>Cuando lo que escribe el visitante nombra alguna de las palabras clave, el bot contesta tu aviso y <strong>nada más</strong>: no sigue con el menú, no consulta tu sitio ni pasa con una persona. Después del aviso queda un botón <em>Ver opciones</em> para volver al menú.</p>
+<h2>Cargar un aviso</h2>
+<p>En la pantalla <strong>Avisos</strong>, tocá <strong>Nuevo aviso</strong> y completá:</p>
+<table class="docs-table">
+<thead><tr><th>Campo</th><th>Qué poner</th></tr></thead>
+<tbody>
+<tr><td><strong>Nombre</strong></td><td>Cómo lo reconocés vos en la lista. Ejemplo: «Urgencias».</td></tr>
+<tr><td><strong>Palabras clave</strong></td><td>Una o más, separadas por coma o una por renglón. Cada una con al menos 3 letras. Pueden ser frases: «envío al exterior».</td></tr>
+<tr><td><strong>Qué contesta el bot</strong></td><td>El texto del aviso, igual cada vez.</td></tr>
+</tbody>
+</table>
+<p>Podés tener hasta 10 avisos. Para cambiar o borrar uno, usá los botones de su fila.</p>
+<h2>Cómo se comparan las palabras</h2>
+<ul>
+<li>No importan las mayúsculas, los acentos ni los signos: «URGENCIA!!» y «urgencia» son lo mismo.</li>
+<li>Se compara <strong>palabra entera</strong>: la clave «urgencia» no se dispara con «urgencias». Si querés cubrir las dos formas, cargá las dos.</li>
+<li>Una frase clave tiene que estar completa y en orden: «envío al exterior» no se dispara con solo «envío».</li>
+<li>Si dos avisos coinciden, gana el que está primero en la lista.</li>
+</ul>
+<div class="callout warn">
+<p><strong>Un aviso gana sobre todo lo demás</strong>, incluso sobre una pregunta fija o sobre un pedido de hablar con una persona. Usá palabras bien específicas: una palabra muy común haría que el bot conteste el aviso en cualquier conversación.</p>
+</div>
+<p>Los avisos funcionan igual en el chat de tu sitio y en tu <a href="/docs/whatsapp.html">WhatsApp</a>, y también si tu bot está en modo cerrado.</p>
+<div class="docs-nav-footer">
+<a href="/docs/informacion.html">← Información extra</a>
+<a href="/docs/formularios.html">Formularios y pedidos →</a>
+</div>
+  </main>
+</div>
+
+<footer style="background:var(--dark);color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem;">
+  © 2026 LibraBot · parte de <a href="https://librasuite.com.ar" style="color:#94a3b8">LibraSuite</a> · <a href="/" style="color:#94a3b8">Inicio</a> · <a href="/legal/terminos.html" style="color:#94a3b8">Términos y condiciones</a>
+</footer>
+</body>
+</html>

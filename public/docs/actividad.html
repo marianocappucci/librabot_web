@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad — Guía de LibraBot</title>
+  <meta name="description" content="Cómo ver cuántas preguntas recibe tu bot, cuáles se repiten más y cuáles no supo contestar, en los últimos 7, 30 o 90 días.">
+  <link rel="canonical" href="https://librabot.com.ar/docs/actividad.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Actividad — Guía de LibraBot">
+  <meta property="og:description" content="Cómo ver cuántas preguntas recibe tu bot, cuáles se repiten más y cuáles no supo contestar, en los últimos 7, 30 o 90 días.">
+  <meta property="og:url" content="https://librabot.com.ar/docs/actividad.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="navbar-brand" style="text-decoration:none"><img src="/img/marca.svg" alt="" class="logo-icon" width="32" height="32">LibraBot</a>
+  <div class="navbar-links">
+    <a href="/#funciones">Qué hace</a>
+    <a href="/#planes">Planes</a>
+    <a href="/docs/" class="active" style="color:var(--brand)">Guía</a>
+    <a href="https://panel.librabot.com.ar" target="_blank" rel="noopener" class="btn-nav">Entrar al panel</a>
+  </div>
+</nav>
+
+<div class="docs-wrapper">
+  <nav class="docs-sidebar" aria-label="Guía">
+    <div class="docs-sidebar-section">Inicio</div>
+    <a href="/docs/">Introducción</a>
+    <a href="/docs/primeros-pasos.html">Primeros pasos</a>
+    <div class="docs-sidebar-section">Configurar tu bot</div>
+    <a href="/docs/sitio-web.html">Sitio web</a>
+    <a href="/docs/instalar.html">Instalarlo en tu sitio</a>
+    <a href="/docs/aspecto.html">Aspecto del chat</a>
+    <a href="/docs/mensajes.html">Bienvenida y botones de inicio</a>
+    <a href="/docs/preguntas-fijas.html">Preguntas fijas</a>
+    <a href="/docs/informacion.html">Información extra</a>
+    <a href="/docs/avisos.html">Avisos por palabra clave</a>
+    <a href="/docs/formularios.html">Formularios y pedidos</a>
+    <a href="/docs/sin-respuesta.html">Sin respuesta</a>
+    <div class="docs-sidebar-section">Atención</div>
+    <a href="/docs/atencion.html">Hablar con una persona</a>
+    <a href="/docs/whatsapp.html">El bot en tu WhatsApp</a>
+    <a href="/docs/cartel-qr.html">Cartel con el QR de WhatsApp</a>
+    <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>
+    <div class="docs-sidebar-section">Seguimiento</div>
+    <a href="/docs/actividad.html" class="active">Actividad</a>
+    <a href="/docs/historial.html">Historial de cambios</a>
+    <div class="docs-sidebar-section">Tu cuenta</div>
+    <a href="/docs/plan.html">Tu plan</a>
+    <a href="/docs/usuarios.html">Usuarios y solo lectura</a>
+    <a href="/docs/problemas.html">Problemas frecuentes</a>
+  </nav>
+
+  <main class="docs-content">
+    <h1>Actividad</h1>
+<p class="docs-lead">Qué le preguntan a tu bot, cuánto, y qué no supo contestar.</p>
+<h2>Elegir el período</h2>
+<p>En la pantalla <strong>Actividad</strong>, arriba, elegís <strong>Últimos 7 días</strong>, <strong>30 días</strong> o <strong>90 días</strong> (hoy incluido).</p>
+<h2>Qué muestra</h2>
+<table class="docs-table">
+<thead><tr><th>Qué</th><th>Qué significa</th></tr></thead>
+<tbody>
+<tr><td><strong>Preguntas</strong></td><td>Cuántas preguntas respondió el bot y en cuántas conversaciones.</td></tr>
+<tr><td><strong>Contestadas por el bot</strong></td><td>El porcentaje de esas preguntas que pudo contestar.</td></tr>
+<tr><td><strong>Sin respuesta</strong></td><td>Cuántas no supo contestar.</td></tr>
+<tr><td><strong>Pasaron a una persona</strong></td><td>Cuántas conversaciones del período terminaron derivadas a tu equipo.</td></tr>
+<tr><td><strong>Preguntas por día</strong></td><td>Un gráfico de barras; si pasás el mouse por una barra ves el día y la cantidad.</td></tr>
+<tr><td><strong>Lo más preguntado</strong></td><td>Las 10 preguntas que más se repiten, con cuántas veces y la última vez.</td></tr>
+<tr><td><strong>Lo que el bot no supo contestar</strong></td><td>Las 15 más repetidas, agrupadas, con el botón <strong>Crear pregunta fija</strong>.</td></tr>
+</tbody>
+</table>
+<h2>Cómo cuenta</h2>
+<ul>
+<li>Una pregunta es un mensaje del visitante que el bot contestó. <strong>No cuentan</strong> el saludo ni «menú», ni lo que contesta una persona de tu equipo, ni los pasos de un <a href="/docs/formularios.html">formulario</a> (solo el último).</li>
+<li>Agrupa las que se escriben casi igual: «¿Cuál es el horario?» y «cual es el horario» cuentan como una. No agrupa por significado: «horario» y «a qué hora abren» quedan separadas.</li>
+<li>Los días son de hora argentina; los días sin preguntas figuran en cero.</li>
+</ul>
+<h2>Qué hacer con esto</h2>
+<p>Lo que más se repite en «Lo que el bot no supo contestar» es lo primero que conviene convertir en <a href="/docs/preguntas-fijas.html">pregunta fija</a>. Para ver cada pregunta suelta con su fecha, mirá <a href="/docs/sin-respuesta.html">Sin respuesta</a>.</p>
+<div class="docs-nav-footer">
+<a href="/docs/conversaciones.html">← Conversaciones en Chatwoot</a>
+<a href="/docs/historial.html">Historial de cambios →</a>
+</div>
+  </main>
+</div>
+
+<footer style="background:var(--dark);color:#94a3b8;text-align:center;padding:1.5rem;font-size:.85rem;">
+  © 2026 LibraBot · parte de <a href="https://librasuite.com.ar" style="color:#94a3b8">LibraSuite</a> · <a href="/" style="color:#94a3b8">Inicio</a> · <a href="/legal/terminos.html" style="color:#94a3b8">Términos y condiciones</a>
+</footer>
+</body>
+</html>

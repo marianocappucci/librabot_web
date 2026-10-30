@@ -40,12 +40,20 @@
     <a href="/docs/mensajes.html">Bienvenida y botones de inicio</a>
     <a href="/docs/preguntas-fijas.html" class="active">Preguntas fijas</a>
     <a href="/docs/informacion.html">Información extra</a>
+    <a href="/docs/avisos.html">Avisos por palabra clave</a>
+    <a href="/docs/formularios.html">Formularios y pedidos</a>
     <a href="/docs/sin-respuesta.html">Sin respuesta</a>
     <div class="docs-sidebar-section">Atención</div>
     <a href="/docs/atencion.html">Hablar con una persona</a>
+    <a href="/docs/whatsapp.html">El bot en tu WhatsApp</a>
+    <a href="/docs/cartel-qr.html">Cartel con el QR de WhatsApp</a>
     <a href="/docs/conversaciones.html">Conversaciones en Chatwoot</a>
+    <div class="docs-sidebar-section">Seguimiento</div>
+    <a href="/docs/actividad.html">Actividad</a>
+    <a href="/docs/historial.html">Historial de cambios</a>
     <div class="docs-sidebar-section">Tu cuenta</div>
     <a href="/docs/plan.html">Tu plan</a>
+    <a href="/docs/usuarios.html">Usuarios y solo lectura</a>
     <a href="/docs/problemas.html">Problemas frecuentes</a>
   </nav>
 
@@ -63,10 +71,14 @@
 <tr><td><strong>Respuesta</strong></td><td>El texto que el bot va a dar, igual cada vez.</td></tr>
 <tr><td><strong>Otras formas de preguntarlo</strong></td><td>Variantes, una por línea. Ejemplo: «¿hacen factura A?». Ayudan a que el bot reconozca la pregunta aunque la escriban distinto.</td></tr>
 <tr><td><strong>Mostrar en el menú de botones</strong></td><td>Si la tildás, la pregunta aparece como botón en el menú del chat.</td></tr>
+<tr><td><strong>Dentro de</strong></td><td>Para armar un submenú: elegí otra pregunta y esta pasa a ser un botón que aparece al tocarla. Se puede anidar hasta tres niveles. Dentro de un submenú el bot ofrece un botón para volver.</td></tr>
 <tr><td><strong>Orden</strong></td><td>Un número: define en qué lugar aparece en el menú. Las de número más bajo van primero.</td></tr>
 </tbody>
 </table>
 <p>Para cambiar o borrar una pregunta, usá los botones de su fila en la lista.</p>
+<h2>Armar un submenú</h2>
+<p>Si tenés muchas respuestas, agrupalas. Por ejemplo, una pregunta fija «Medios de pago» con la respuesta «Estas son las formas de pago», y dentro de ella «¿Aceptan tarjeta?» y «¿Hacen factura A?» con la opción <strong>Dentro de → Medios de pago</strong>. Al tocar «Medios de pago», el bot muestra esas dos como botones.</p>
+<p>La pregunta que agrupa las demás se muestra en el menú del chat; las de adentro solo aparecen al entrar a ella.</p>
 <div class="callout success">
 <p><strong>Un buen hábito:</strong> mirá cada tanto <a href="/docs/sin-respuesta.html">Sin respuesta</a>. Lo que se repite ahí es lo primero que conviene convertir en pregunta fija.</p>
 </div>
